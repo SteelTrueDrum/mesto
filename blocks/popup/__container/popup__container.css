@@ -7,5 +7,7 @@
   color: #000;
   position: fixed;
   top: 123px;
-  left: 19px;
+  margin: 0 auto;
+  width: 282px;
+  position: relative;
 }
