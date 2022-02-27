@@ -1,0 +1,6 @@
+.element__bottom-container{
+  display: flex;
+  width: 246px;
+  justify-content: space-around;
+  align-items: center;
+}
