@@ -1,0 +1,8 @@
+.popup__profile-about {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin: 0 22px 45px;
+}
