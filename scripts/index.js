@@ -5,6 +5,7 @@ let popupProfileName = popup.querySelector('.popup__profile-name');
 let popupProfileAbout = popup.querySelector('.popup__profile-about');
 let popupSaveButton = popup.querySelector('.popup__save-btn');
 let profileTitle = document.querySelector('.profile__title');
+let profileAbout = document.querySelector('.profile__about');
 let profileEditButton = document.querySelector('.profile__edit-btn');
 
 function togglePopup() {
@@ -12,17 +13,15 @@ function togglePopup() {
 };
 
 profileEditButton.addEventListener('click', togglePopup);
-
 popupCloseButton.addEventListener('click', togglePopup);
+popupSaveButton.addEventListener('click', togglePopup);
+
 
 function formSubmitHandler (evt) {
-  evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
+  evt.preventDefault(); //
 
-  // Получите значение полей jobInput и nameInput из свойства value
-
-  // Выберите элементы, куда должны быть вставлены значения полей
-
-  // Вставьте новые значения с помощью textContent
+  profileTitle.textContent =  popupProfileName.value;
+  profileAbout.textContent =  popupProfileAbout.value;
 }
 
-popup.addEventListener('submit', formSubmitHandler);
+popupSaveButton.addEventListener('click', formSubmitHandler);

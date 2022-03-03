@@ -6,4 +6,8 @@
   text-align: center;
   margin: 0;
   grid-column: span 2;
+  max-width: 282px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

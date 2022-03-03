@@ -12,7 +12,7 @@
   <div class="header__logo"></div>
 </header>
 <main class="content">
-  <div class="profile page__profile">
+  <section class="profile page__profile">
     <div class="profile__avatar"></div>
     <div class="profile__info">
       <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -20,8 +20,8 @@
       <p class="profile__about">Исследователь океана</p>
     </div>
     <div class="profile__add-btn"></div>
-  </div>
-  <div class="elements">
+  </section>
+  <section class="elements" aria-label="Блок с фото">
     <div class="element">
       <img src="/images/element__Karachaevsk.jpg" alt="Карачаевск" class="element__img">
       <div class="element__bottom-container">
@@ -64,7 +64,7 @@
         <div class="element__like-btn"></div>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 <footer class="footer page__footer">
   <h3 class="footer__copyright">© 2020 Mesto Russia</h3>
@@ -74,8 +74,8 @@
   <div class="popup__container">
     <div class="popup__close-btn" aria-label="Закрыть окно"></div>
     <h2 class="popup__title">Редактировать профиль</h2>
-    <input type="text" class="popup__profile-name">
-    <input type="text" class="popup__profile-about">
+    <input type="text" class="popup__profile-name" value="Жак-Ив Кусто">
+    <input type="text" class="popup__profile-about" value="Исследователь океана">
     <input type="submit" class="popup__save-btn" value="Сохранить">
   </div>
 </div>
