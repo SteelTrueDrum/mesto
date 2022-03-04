@@ -1,5 +1,5 @@
 .element__like-btn {
-  background-image: url('/images/element__like_disabled.svg');
+  background-image: url('../../../images/element__like_disabled.svg');
   background-position: center;
   background-repeat: no-repeat;
   height: 19px;
@@ -14,6 +14,6 @@
 }
 
 .element__like-btn:active{
-  background-image: url('/images/element__like_active.svg');
+  background-image: url('../../../images/element__like_active.svg');
   opacity: 1;
 }
