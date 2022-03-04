@@ -3,3 +3,9 @@
   display: flex;
   min-width: calc(100% - 7% * 2);
 }
+
+@media screen and (min-width: 1049px) {
+  .footer {
+    min-width: calc(100% - 15% * 2);
+  }
+}

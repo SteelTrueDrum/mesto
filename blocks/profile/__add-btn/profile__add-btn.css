@@ -6,9 +6,17 @@
   height: 50px;
   border: 2px solid #fff;
   transition: opacity 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .profile__add-btn:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .profile__add-btn {
+    min-width: 150px;
+    /* margin-left: 250px; */
+  }
 }

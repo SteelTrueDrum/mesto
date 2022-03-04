@@ -5,3 +5,16 @@
   align-items: center;
 
 }
+
+@media screen and (min-width: 900px) {
+  .profile {
+    flex-direction: row;
+    min-width: calc(100% - 200px * 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profile {
+    justify-content: space-between;
+  }
+}

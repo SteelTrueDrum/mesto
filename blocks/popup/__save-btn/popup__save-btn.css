@@ -8,9 +8,19 @@
   text-align: center;
   margin: 0 22px 25px;
   transition: opacity 0.3s ease-in-out;
+  min-height: 46px;
+  border: none;
 }
 
 .popup__save-btn:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .popup__save-btn {
+    width: 358px;
+    margin: 0 36px 48px;
+    min-height: 50px;
+  }
 }
