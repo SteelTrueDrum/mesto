@@ -13,13 +13,13 @@
 </header>
 <main class="content">
   <section class="profile page__profile">
-    <div class="profile__avatar"></div>
+    <img class="profile__avatar" src="./images/avatar-image.jpg" alt="Аватар профиля">
     <div class="profile__info">
       <h1 class="profile__title">Жак-Ив Кусто</h1>
-      <div class="profile__edit-btn"></div>
+      <button type="button" class="profile__edit-btn"></button>
       <p class="profile__about">Исследователь океана</p>
     </div>
-    <div class="profile__add-btn"></div>
+    <button type="button" class="profile__add-btn"></button>
   </section>
   <section class="elements" aria-label="Блок с фото">
     <div class="element">
@@ -72,11 +72,13 @@
 
 <div class="popup">
   <div class="popup__container">
-    <div class="popup__close-btn"></div>
+    <button class="popup__close-btn" type="button"></button>
     <h2 class="popup__title">Редактировать профиль</h2>
-    <input type="text" class="popup__profile-name" value="Жак-Ив Кусто">
-    <input type="text" class="popup__profile-about" value="Исследователь океана">
-    <input type="submit" class="popup__save-btn" value="Сохранить">
+    <form class="popup__form">
+      <input type="text" class="popup__profile-name" value="Жак-Ив Кусто">
+      <input type="text" class="popup__profile-about" value="Исследователь океана">
+      <button type="submit" class="popup__save-btn">Сохранить</button>
+    </form>
   </div>
 </div>
 <script src="./scripts/index.js"></script>
