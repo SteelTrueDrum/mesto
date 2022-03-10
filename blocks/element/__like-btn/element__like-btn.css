@@ -3,9 +3,12 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 19px;
-  width: 22px;
+  min-width: 22px;
   margin: 0;
   transition: opacity 0.3s ease-in-out;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
 .element__like-btn:hover {

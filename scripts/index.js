@@ -1,7 +1,7 @@
 let popup = document.querySelector('.popup');
 let popupCloseButton = popup.querySelector('.popup__close-btn');
-let popupProfileName = popup.querySelector('.popup__profile-name');
-let popupProfileAbout = popup.querySelector('.popup__profile-about');
+let popupProfileName = popup.querySelector('.popup__input_name');
+let popupProfileAbout = popup.querySelector('.popup__input_about');
 let popupSaveButton = popup.querySelector('.popup__save-btn');
 let profileTitle = document.querySelector('.profile__title');
 let profileAbout = document.querySelector('.profile__about');
@@ -20,8 +20,8 @@ function closePopup() {
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
-  profileTitle.textContent =  popupProfileName.value;
-  profileAbout.textContent =  popupProfileAbout.value;
+  profileTitle.textContent = popupProfileName.value;
+  profileAbout.textContent = popupProfileAbout.value;
   closePopup();
 }
 

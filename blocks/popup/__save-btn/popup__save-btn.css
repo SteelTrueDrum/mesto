@@ -10,6 +10,7 @@
   transition: opacity 0.3s ease-in-out;
   min-height: 46px;
   border: none;
+  width: 238px;
 }
 
 .popup__save-btn:hover {
