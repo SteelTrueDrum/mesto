@@ -6,6 +6,6 @@
 
 @media screen and (min-width: 1049px) {
   .footer {
-    min-width: calc(100% - 15% * 2);
+    min-width: 880px;
   }
 }
