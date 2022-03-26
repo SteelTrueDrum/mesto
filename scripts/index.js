@@ -4,6 +4,10 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
   },
   {
+    name: 'Архангельская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
     name: 'Челябинская область',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
   },
@@ -14,10 +18,6 @@ const initialCards = [
   {
     name: 'Камчатка',
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
   },
   {
     name: 'Байкал',
@@ -40,6 +40,36 @@ const profileEditButton = document.querySelector('.profile__edit-btn');
 const profileAddButton = document.querySelector('.profile__add-btn');
 const popupFormProfile = popupProfile.querySelector('.popup__form-profile');
 const popupFormAddElem = document.querySelector('.popup__form-addElem');
+
+function addElement(elem) {
+  /*получить содержимое template*/
+  const elements = document.querySelector('.elements');
+  const elementTemplate = document.querySelector('#template');
+  /*клонируем содержимое тега template*/
+  const element = elementTemplate.content.cloneNode(true);
+  /*наполняем содержимым*/
+  element.querySelector('.element__img').src = elem.link;
+  element.querySelector('.element__img').alt = elem.name;
+  element.querySelector('.element__title').textContent = elem.name;
+
+  const likeButton = element.querySelector('.element__like-btn');
+  likeButton.addEventListener('click', function (event) {
+    event.target.classList.toggle('element__like-btn_active');
+  });
+
+  const delButton = element.querySelector('.element__del-btn');
+  delButton.addEventListener('click', removeElem);
+
+  /*Вставляем склонированный контент на страницу*/
+  elements.append(element);
+}
+
+function removeElem(evt) {
+  const elem = evt.currentTarget.closest('.element');
+  elem.remove();
+}
+
+initialCards.map(addElement);
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -68,10 +98,6 @@ function formSubmitHandler(evt) {
   profileTitle.textContent = popupProfileName.value;
   profileAbout.textContent = popupProfileAbout.value;
   closePopup(popupProfile);
-}
-
-function addCard() {
-
 }
 
 function formSubmitHandler(evt) {

@@ -22,7 +22,7 @@
     <button type="button" class="profile__add-btn"></button>
   </section>
   <section class="elements" aria-label="Блок с фото">
-    <div class="element">
+    <!-- <div class="element">
       <img src="./images/element__Karachaevsk.jpg" alt="Карачаевск" class="element__img">
       <button class="element__del-btn" type="button"></button>
       <div class="element__bottom-container">
@@ -69,13 +69,15 @@
         <h2 class="element__title">Карачаевск</h2>
         <button type="button" class="element__like-btn"></button>
       </div>
-    </div>
-    <template class="element">
-      <img src="./images/element__Karachaevsk.jpg" alt="Карачаевск" class="element__img">
-      <button class="element__del-btn" type="button"></button>
-      <div class="element__bottom-container">
-        <h2 class="element__title">Карачаевск</h2>
-        <button type="button" class="element__like-btn"></button>
+    </div> -->
+    <template id="template">
+      <div class="element">
+        <img src="./images/element__Karachaevsk.jpg" alt="Карачаевск" class="element__img">
+        <button class="element__del-btn" type="button"></button>
+        <div class="element__bottom-container">
+          <h2 class="element__title">Карачаевск</h2>
+          <button type="button" class="element__like-btn"></button>
+        </div>
       </div>
     </template>
   </section>
@@ -106,7 +108,7 @@
     </form>
   </div>
 </div>
-<div class="popup popup_preview popup_opened">
+<div class="popup popup_preview">
   <div class="popup__container-wrap">
     <button class="popup__close-btn" type="button"></button>
     <figure class="popup__elem-figure">
