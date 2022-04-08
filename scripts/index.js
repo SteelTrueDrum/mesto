@@ -63,11 +63,15 @@ initialCards.forEach(function(elem) {
 // фунцкия открытия попап
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closeByEscKey);
+  document.addEventListener('mousedown', handleOverlayClick);
 };
 
 // фунцкия закрытия попап
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeByEscKey);
+  document.removeEventListener('mousedown', handleOverlayClick);
 };
 
 function openProfile() {
@@ -82,6 +86,20 @@ function closeProfile() {
 
 function openAddElementPopup() {
   openPopup(popupAddElem);
+};
+
+// функция закрытия попап по клавише Esc
+function closeByEscKey(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  };
+};
+
+// функция закрытия попап по клику мыши на оверлей
+function handleOverlayClick(evt) {
+  if(evt.target.classList.contains('popup')){
+    closePopup(document.querySelector('.popup_opened'));
+  };
 };
 
 // сохранение профайла
@@ -100,7 +118,7 @@ function addElemHandler(evt) {
 };
 
 // обработка кнопок закрытия окон
-popupCloseButtons.forEach((btnClose) => {btnClose.addEventListener("click", () => closePopup(btnClose.closest(".popup_opened")));});
+popupCloseButtons.forEach((btnClose) => {btnClose.addEventListener('click', () => closePopup(btnClose.closest('.popup_opened')));});
 
 // слушатели
 profileAddButton.addEventListener('click', openAddElementPopup);

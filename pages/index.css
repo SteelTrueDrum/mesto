@@ -44,8 +44,12 @@
 @import url(../blocks/popup/__input/_type/popup__input_type_name.css);
 @import url(../blocks/popup/__input/_type/popup__input_type_about.css);
 @import url(../blocks/popup/__save-btn/popup__save-btn.css);
+@import url(../blocks/popup/__save-btn/_inactive/popup__save-btn_inactive.css);
 @import url(../blocks/popup/__elem-img/popup__elem-img.css);
 @import url(../blocks/popup/_preview/popup_preview.css);
 @import url(../blocks/popup/__elem-figure/popup__elem-figure.css);
 @import url(../blocks/popup/__elem-caption/popup__elem-caption.css);
 @import url(../blocks/popup/__container-wrap/popup__container-wrap.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_error.css);
+@import url(../blocks/input-error/input-error.css);
+@import url(../blocks/input-error/_active/input-error_active.css);

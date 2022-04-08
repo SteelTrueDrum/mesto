@@ -4,14 +4,15 @@
   line-height: 30px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
-  margin: 0 22px 30px;
+  margin: 0 22px;
   box-sizing: border-box;
   width: 238px;
+  outline: none;
 }
 
 @media screen and (min-width: 900px) {
   .popup__input {
     width: 358px;
-    margin: 0 36px 30px;
+    margin: 0 36px;
   }
 }

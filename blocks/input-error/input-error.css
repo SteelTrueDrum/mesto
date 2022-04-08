@@ -1,0 +1,17 @@
+.input-error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #F00;
+  visibility: hidden;
+  box-sizing: border-box;
+  margin: 5px 22px 13px;
+  width: 238px;
+}
+
+@media screen and (min-width: 900px) {
+  .input-error {
+    margin: 5px 36px 30px;
+    width: 358px;
+  }
+}
