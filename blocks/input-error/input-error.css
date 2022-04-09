@@ -7,11 +7,12 @@
   box-sizing: border-box;
   margin: 5px 22px 13px;
   width: 238px;
+  min-height: 30px;
 }
 
 @media screen and (min-width: 900px) {
   .input-error {
-    margin: 5px 36px 30px;
+    margin: 5px 36px 10px;
     width: 358px;
   }
 }

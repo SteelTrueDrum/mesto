@@ -8,6 +8,7 @@ const popupProfileAbout = popupProfile.querySelector('.popup__profile-about');
 const popupElemName = document.querySelector('.popup__elem-name');
 const popupElemLink = document.querySelector('.popup__elem-link');
 const popupSaveButton = popupProfile.querySelector('.popup__save-btn');
+const popupAddElemSaveBtn = popupAddElem.querySelector('.popup__save-btn');
 const profileTitle = document.querySelector('.profile__title');
 const profileAbout = document.querySelector('.profile__about');
 const profileEditButton = document.querySelector('.profile__edit-btn');
@@ -85,6 +86,9 @@ function closeProfile() {
 }
 
 function openAddElementPopup() {
+  popupFormAddElem.reset();
+  popupAddElemSaveBtn.setAttribute('disabled', 'disabled');
+  popupAddElemSaveBtn.classList.add('popup__save-btn_inactive');
   openPopup(popupAddElem);
 };
 
