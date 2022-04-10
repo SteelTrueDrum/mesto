@@ -43,6 +43,11 @@ function addElement(elem) {
     openPopup(popupPreview);
   });
 
+  // сброс формы и блокировка кнопки
+  popupFormAddElem.reset();
+  popupAddElemSaveBtn.setAttribute('disabled', 'disabled');
+  popupAddElemSaveBtn.classList.add('popup__save-btn_inactive');
+
   return element;
 };
 
@@ -86,9 +91,6 @@ function closeProfile() {
 }
 
 function openAddElementPopup() {
-  popupFormAddElem.reset();
-  popupAddElemSaveBtn.setAttribute('disabled', 'disabled');
-  popupAddElemSaveBtn.classList.add('popup__save-btn_inactive');
   openPopup(popupAddElem);
 };
 
